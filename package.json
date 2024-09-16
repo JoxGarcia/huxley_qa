@@ -1,0 +1,31 @@
+{
+  "name": "huxley",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "open": ".\\node_modules\\.bin\\cypress open",
+    "test": "npx cypress run --browser electron --headless",
+    "report": "node .\\cucumber-html-report.js",
+    "test-electron-headless": "npx cypress run",
+    "test-electron": "npx cypress run --headed",
+    "test-chrome": "npx cypress run --headed --browser chrome",
+    "test-chrome-headless": "npx cypress run --browser chrome"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinition": false,
+    "step_definitions": "cypress/e2e/Test",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "cypress": "^13.14.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^3.7.0",
+    "cypress-multi-reporters": "^1.6.4",
+    "dotenv": "^16.4.5"
+  }
+}
