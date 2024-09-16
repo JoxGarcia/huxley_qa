@@ -115,3 +115,5 @@ Opens the Cypress Test Runner in interactive mode.
 
 To watch the report, run the tests or run the command `npm run report`, then open the file cypress/reports/cucumber-htmlreport.html.
 It should look like this:
+![img](https://github.com/user-attachments/assets/333c1d3b-b87a-4ca4-be8e-b0b17bed9586)
+
